@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+ 
+// App.jsx
+import React from 'react';
+import BannerComponent from './BannerComponent';
+import ExhibitComponent from './ExhibitComponent';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <BannerComponent title="Site Title" />
+      <ExhibitComponent heading="Example Exhibit">
+        {/* Child components can go here */}
+        <p>This is some content for the exhibit.</p>
+      </ExhibitComponent>
     </div>
   );
-}
+};
 
 export default App;
+
